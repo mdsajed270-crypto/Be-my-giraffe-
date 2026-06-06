@@ -1,0 +1,295 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(
+        to bottom,
+        #050816,
+        #091833,
+        #130f40
+    );
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Stars Background */
+#stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    background:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:
+    50px 50px,
+    100px 100px;
+
+    animation: moveStars 30s linear infinite;
+}
+
+@keyframes moveStars{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(100px);
+    }
+}
+
+/* Intro Screen */
+#intro{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.title{
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:0 0 20px #8c7ae6;
+}
+
+.intro-text{
+    font-size:1.2rem;
+    line-height:2;
+    max-width:700px;
+}
+
+.tuba{
+    color:#ff9ff3;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+
+/* Enter Button */
+#enterBtn{
+    margin-top:40px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:bold;
+    background:#ff9ff3;
+    color:black;
+
+    transition:0.3s;
+}
+
+#enterBtn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #ff9ff3;
+}
+
+/* Main Content */
+#content{
+    display:none;
+    padding:60px 20px;
+}
+
+/* Chapters */
+.chapter{
+    max-width:900px;
+    margin:100px auto;
+    text-align:center;
+}
+
+.chapter h2{
+    margin-bottom:25px;
+    font-size:2rem;
+    color:#feca57;
+}
+
+.chapter p{
+    font-size:1.1rem;
+    line-height:2;
+}
+
+/* Buttons */
+.chapter button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:1rem;
+    margin-top:20px;
+
+    background:#48dbfb;
+    color:black;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.chapter button:hover{
+    transform:scale(1.08);
+}
+
+/* Achievement Popup */
+#achievementBox{
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    background:#111827;
+    color:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    min-width:280px;
+
+    display:none;
+
+    box-shadow:
+    0 0 25px #00d2d3;
+
+    z-index:9999;
+}
+
+.unlock-title{
+    color:#feca57;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.unlock-text{
+    color:#ffffff;
+}
+
+/* Scroll Animation */
+.chapter{
+    opacity:0;
+    transform:translateY(60px);
+    transition:1s;
+}
+
+.chapter.show{
+    opacity:1;
+    transform:translateY(0);
+}
+#friendshipDays{
+    margin-top:20px;
+    color:#ff9ff3;
+    font-size:3rem;
+}
+
+.stars-container{
+    margin-top:30px;
+}
+
+.stars-container span{
+
+    font-size:3rem;
+
+    margin:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.stars-container span:hover{
+
+    transform:scale(1.3);
+
+}
+
+.special{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:2.2;
+
+    font-size:1.2rem;
+}
+
+#cakeResult{
+
+    margin-top:20px;
+
+    color:#feca57;
+
+    font-size:1.2rem;
+}
+
+#memoryText{
+
+    margin-top:25px;
+
+    color:#48dbfb;
+
+    font-size:1.1rem;
+}
+#proposalBox{
+    margin-top:30px;
+}
+
+#finalMessage{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    padding:80px 20px;
+
+    display:none;
+
+    color:#ff9ff3;
+
+    animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+.confetti{
+
+    position:fixed;
+
+    top:-10px;
+
+    font-size:25px;
+
+    animation:fall 5s linear forwards;
+
+    z-index:9999;
+}
+
+@keyframes fall{
+
+    to{
+
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+
+    }
+
+}

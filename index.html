@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The TubaVerse</title><link rel="stylesheet" href="style.css"></head>
+<body><!-- Background Stars --><div id="stars"></div><!-- Background Music --><audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio><!-- Intro Screen --><section id="intro"><h1 class="title">🌌 Welcome To The TubaVerse 🌌</h1>
+
+<p class="intro-text">
+    This isn't just a website...
+    <br>
+    It's a journey.
+    <br><br>
+    Dedicated to
+    <br>
+    <span class="tuba">Tuba Ara 💫</span>
+    <br><br>
+    Since
+    <br>
+    3 September 2023
+</p>
+
+<button id="enterBtn">
+    Enter The TubaVerse →
+</button>
+
+</section><!-- Main Content --><div id="content"><!-- Chapter 1 --><section class="chapter"><h2>🕸️ Chapter 1: The Origin Story</h2><p>
+Every story starts somewhere.
+<br><br>
+Ours started on
+<b>3 September 2023</b>.
+<br><br>
+Two strangers crossed paths.
+<br>
+Neither knew what was coming next.
+<br><br>
+The conversations.
+<br>
+The laughs.
+<br>
+The chaos.
+<br>
+The memories.
+<br><br>
+Yet somehow...
+<br>
+We're still here.
+</p></section><!-- Chapter 2 --><section class="chapter"><h2>🐡 Puffer Fish Exhibit</h2><button onclick="unlockPuffer()">
+Unlock Puffer Fish
+</button><p id="pufferMessage"></p></section><!-- Chapter 3 --><section class="chapter"><h2>🕷️ Spidey Headquarters</h2><button onclick="unlockSpidey()">
+Find Spidey
+</button><p id="spideyMessage"></p></section><!-- Achievements -->
+
+<!-- Friendship Counter -->
+<section class="chapter">
+
+<h2>⏳ Friendship Counter</h2>
+
+<p>
+We've been friends for:
+</p>
+
+<h1 id="friendshipDays">
+Loading...
+</h1>
+
+</section>
+
+<!-- Cake Kingdom -->
+<section class="chapter">
+
+<h2>🎂 Cake Kingdom</h2>
+
+<p>
+Welcome to Tuba's Bakery.
+Choose a cake.
+</p>
+
+<button onclick="cakeMessage(1)">
+🍫 Chocolate Cake
+</button>
+
+<button onclick="cakeMessage(2)">
+🎂 Red Velvet
+</button>
+
+<button onclick="cakeMessage(3)">
+✨ Mystery Cake
+</button>
+
+<p id="cakeResult"></p>
+
+</section>
+
+<!-- Constellation -->
+<section class="chapter">
+
+<h2>🌠 Constellation Of Memories</h2>
+
+<p>
+Click stars to discover memories.
+</p>
+
+<div class="stars-container">
+
+<span onclick="memory(1)">⭐</span>
+<span onclick="memory(2)">⭐</span>
+<span onclick="memory(3)">⭐</span>
+<span onclick="memory(4)">⭐</span>
+<span onclick="memory(5)">⭐</span>
+
+</div>
+
+<p id="memoryText"></p>
+
+</section>
+
+<!-- Why You're Special -->
+<section class="chapter">
+
+<h2>💖 Why You're Special</h2>
+
+<p class="special">
+
+Tuba,
+
+<br><br>
+
+Out of all the people I've met,
+
+you became someone I never expected
+to become this important.
+
+<br><br>
+
+You were there during random days.
+
+Random conversations.
+
+Random jokes.
+
+Random chaos.
+
+<br><br>
+
+Yet somehow those random moments
+became memories.
+
+<br><br>
+
+You called me Spidey.
+
+You called me Puffer Fish.
+
+And somehow those silly nicknames
+became special.
+
+<br><br>
+
+A best friend isn't someone perfect.
+
+A best friend is someone whose
+presence makes life brighter.
+
+<br><br>
+
+And that's exactly what you've been.
+
+</p>
+
+</section>
+<!-- Achievements -->
+<!-- Final Chapter -->
+
+<section class="chapter">
+
+<h2>🫶 One Last Thing...</h2>
+
+<p class="special">
+
+Tuba,
+
+<br><br>
+
+We've laughed.
+
+We've argued.
+
+We've annoyed each other.
+
+We've survived.
+
+<br><br>
+
+And somehow...
+
+we're still here.
+
+<br><br>
+
+Thank you for being part of my story.
+
+<br><br>
+
+So I have one question.
+
+</p>
+
+<button onclick="bestieProposal()">
+💖 Open Final Question
+</button>
+
+<div id="proposalBox" style="display:none; margin-top:40px;">
+
+<h2>🐡🕷️ Will You Be My Bestie Again?</h2>
+
+<button onclick="acceptBestie()">
+YES 💖
+</button>
+
+<button onclick="acceptBestie()">
+ABSOLUTELY YES 💖
+</button>
+
+</div>
+
+</section>
+
+<!-- Confetti Container -->
+<div id="confettiContainer"></div>
+
+<!-- Final Message -->
+<div id="finalMessage"></div>
+<div id="achievementBox"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
